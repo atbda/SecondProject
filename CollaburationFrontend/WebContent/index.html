@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/login.css">
+
+<script type="text/javascript" src="resources/js/jquery-3.2.1.js"></script>
+
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<script type="text/javascript" src="resources/js/login.js"></script>
+
+
+
+<script type="text/javascript" src="resources/js/angular.min.js"></script>
+  <script src="resources/js/angular-route.min.js"></script>
+  <script type="text/javascript" src="RouteConfig.js"></script>
+  
+</head>
+<body data-ng-app="collaboration"  >
+	<!-- <table width="100%">
+		<tr>
+			<td>CollaburationFrontend</td>
+			<td></td>
+		</tr> -->
+		<div id="upperlable" class="container-fluid">
+		<!-- <label>Social Icon</label> -->
+		</div>
+		<div class="container">
+		<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		<div class="navbar-header">
+		<a class="navbar-brand" href="#">Collaburation</a>
+		</div>
+		<ul class="nav navbar-nav" >
+			
+			<li><a href="#/home">Home</a></li>
+				<li><a href="#/login">Login</a></li> 
+				<li><a href="#/register">Register</a></li> 
+				<li><a href="#/aboutUs">About Us</a></li>
+				<li><a href="#/contactUs">Contact Us</a></li>
+		</ul>
+		</div>
+		</nav>
+</div>
+	<!-- </table> -->
+	<div data-ng-view>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "blogId": 52,
+        "loginname": " Ravi kumar",
+        "blogName": "Java core",
+        "blogContent": "Blog is regarding to Java Language",
+        "createDate": 1521821284370,
+        "likes": 5,
+        "status": "A"
+    },
+    {
+        "blogId": 252,
+        "loginname": " Rahul kumar",
+        "blogName": "Java core",
+        "blogContent": "Blog is regarding to Java Language",
+        "createDate": 1521827080255,
+        "likes": 2,
+        "status": "A"
+    },
+    {
+        "blogId": 152,
+        "loginname": " Rahul kumar",
+        "blogName": "Java core",
+        "blogContent": "Blog is regarding to Java Language",
+        "createDate": 1521826165557,
+        "likes": 2,
+        "status": "A"
+    },
+    {
+        "blogId": 202,
+        "loginname": " Rahul kumar",
+        "blogName": "shahrukh",
+        "blogContent": "Blog is regarding to Java Language",
+        "createDate": 1521826390671,
+        "likes": 2,
+        "status": "A"
+    }
+]
