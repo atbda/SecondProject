@@ -1,0 +1,32 @@
+<div class="container" data-ng-controller="BlogController">
+	<table class="table">
+		<tr>
+			<th>Blog Name</th>
+			<th>Blog Content</th>
+		</tr>
+		
+		<tr >
+<!-- 		<td>{{blogdata.length}}</td>
+ -->					<td data-ng-if="currentUser.userName==null" rowspan="2" style="color: red; font-size: 30px; font-family: tahoma; text-align: center;">Please Login first<td>
+							<td data-ng-if="blogdata.length==0 && currentUser.userName!=null " rowspan="2" style="color: red; font-size: 30px; font-family: tahoma;">No Blogs<td>
+		
+		</tr>
+	<tr data-ng-repeat="blog in blogdata">
+
+			<td data-ng-show="blog.loginname==currentUser.userName">{{blog.blogName}}</td>
+			<td data-ng-show="blog.loginname==currentUser.userName">{{blog.blogContent}}</td>
+			
+			<td data-ng-show="blog.loginname==currentUser.userName">{{blog.status}}</td>
+<td data-ng-show="blog.loginname==currentUser.userName"><input type="button" value="Delete Blog" data-ng-click="deleteBlog(blog.blogId)"class="btn btn-danger"/></td>
+
+		</tr> 
+
+<!-- <tr data-ng-repeat="blog in $scope.blogdata">
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.blogName}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.blogContent}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.status}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname"><input type="button" value="Delete Blog" data-ng-click="deleteBlog(blog.blogId)"class="btn btn-danger"/></td>
+</tr> -->
+	</table>
+</div>
+

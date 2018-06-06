@@ -1,0 +1,31 @@
+<div class="container" data-ng-controller="BlogController">
+	<table class="table">
+		<tr>
+		  
+			<th>Blog Name</th>
+			<th>Blog Content</th>
+			<th>Loginname</th>
+			   <th>ID</th>
+			<th>Operation</th>
+			
+		</tr>
+		<tr data-ng-repeat="blog in allblogdata">
+		    
+			<td>{{blog.blogName}}</td>
+			<td>{{blog.blogContent}}</td>
+			<td>{{blog.loginname}}</td>
+			<td>{{blog.blogId}}</td>
+			
+			<td data-ng-hide="blog.status=='A'">
+			<input type="button" value="Approve" data-ng-click="approve(blog.blogId)" class="btn btn-info"/>
+			</td>
+			<td data-ng-hide="blog.status=='NA'">
+			<input type="button" value="Reject" data-ng-click="reject(blog.blogId)" class="btn btn-success"/>
+			</td>
+			<td data-ng-hide="blog.status=='A'">
+			<input type="button" value="Delete" data-ng-click="deleteBlog(blog.blogId)" class="btn btn-danger"/>
+			</td>
+		</tr>
+
+		</table>
+		</div>

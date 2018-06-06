@@ -1,0 +1,29 @@
+
+<div class="container" data-ng-controller="BlogController">
+	<table class="table">
+		<tr>
+			<th >Blog Name</th>
+			<th>Blog Content</th>
+			<th>Status</th>
+			<th>Login Name</th>
+		</tr>
+		<tr data-ng-repeat="blog in allblogdata">
+			<td>{{blog.blogName}}</td>
+			<td>{{blog.blogContent}}</td>
+			<td>{{blog.status}}</td>
+			<td>{{blog.loginname}}</td>
+			
+		</tr>
+
+
+	</table>
+</div>
+
+
+
+
+
+
+
+
+

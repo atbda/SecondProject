@@ -1,0 +1,19 @@
+
+<div class="container" data-ng-controller="ForumController">
+	<table class="table">
+		<tr>
+			<td>Forum Name</td>
+			<td>Forum Content</td>
+			<td>Status</td>
+			<td>Loginname</td>
+		</tr>
+		<tr data-ng-repeat="forum in forumdata">
+			<td>{{forum.forumName}}</td>
+			<td>{{forum.forumContent}}</td>
+			<td>{{forum.status}}</td>
+			<td>{{forum.loginname}}</td>
+		</tr>
+
+
+	</table>
+</div>

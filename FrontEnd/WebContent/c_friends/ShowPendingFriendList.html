@@ -1,0 +1,19 @@
+<div class="container" data-ng-controller="FriendController">
+<table class="table">
+<tr>
+<td>Friend Name</td>
+<td>Operation</td>
+</tr>
+<tr data-ng-repeat="friend in pendingFriendList">
+<td><img scr="http://localhost:8085/CollaborationControllers/getImage/{{friend.friendloginname}}" class="img-circle" alt="Cinque Terre" width="100" height="100">{{friend.loginname}}</td>
+<td><input type="button" value="UnFriend" data-ng-click="deleteFriend(friend.friendId)" class="btn btn-danger"/></td>
+<td><input type="button" value="Accept" data-ng-click="acceptFriend(friend.friendId)" class="btn btn-success"/></td>
+
+
+</tr>
+
+
+</table>
+
+
+</div>

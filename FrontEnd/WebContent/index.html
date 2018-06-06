@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/login.css">
+
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+
+
+<script type="text/javascript" src="resources/js/jquery-3.2.1.js"></script>
+
+<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/login.js"></script>
+
+<script type="text/javascript"   src="resources/js/angular.min.js"></script>
+<script src="resources/js/angular-route.min.js"></script>
+<script src="resources/js/angular-cookies.js"></script>
+<script type="text/javascript" src="RouteConfig.js"></script>
+<!--     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+ -->
+
+
+<script type="text/javascript" src="c_user/UserController.js"></script>
+<script type="text/javascript" src="c_blog/BlogController.js"></script>
+<script type="text/javascript" src="c_forum/ForumController.js"></script>
+<script type="text/javascript" src="c_job/JobController.js"></script>
+<script type="text/javascript" src="c_friends/FriendController.js"></script>
+
+
+
+
+<!-- 
+<script type="text/javascript" src="c_user/UserService.js"></script>
+<script type="text/javascript" src="c_blog/BlogController.js"></script>
+ -->
+
+</head>
+<body data-ng-app="collaboration" data-ng-controller="UserController">
+	<!-- <table width="100%">
+		<tr>
+			<td>CollaburationFrontend</td>
+			<td></td>
+		</tr> -->
+	<div id="upperlable" class="container-fluid">
+		<!-- <label>Social Icon</label> -->
+	</div>
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Collaburation</a>
+				</div>
+				<ul class="nav navbar-nav">
+
+					<li><a href="#/home">Home</a></li>
+					<li
+						data-ng-hide="currentUser.role=='ROLE_ADMIN'||currentUser.role=='ROLE_USER'"><a
+						href="#/login">Login</a></li>
+					<li
+						data-ng-hide="currentUser.role=='ROLE_ADMIN'||currentUser.role=='ROLE_USER'"><a
+						href="#/register">Register</a></li>
+					<li
+						data-ng-hide="currentUser.role=='ROLE_ADMIN'||currentUser.role=='ROLE_USER'"><a
+						href="#/aboutUs">About Us</a></li>
+					<li
+						data-ng-hide="currentUser.role=='ROLE_ADMIN'||currentUser.role=='ROLE_USER'"><a
+						href="#/contactUs">Contact Us</a></li>
+					
+					
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Blog<span class="caret" /></a>
+						<ul class="dropdown-menu">
+							<li data-ng-hide="currentUser==undefined"><a href="#/blog">AddBlog</a>
+							<li>
+							<li><a href="#/showblog">Show Blog</a></li>
+							<li><a href="#/allapprovedblog">Show All Approved Blog</a></li>
+							<li><a href="#/allblog">ALL Blog</a></li>
+							<li
+								data-ng-hide="currentUser==undefined||currentUser.role=='ROlE_ADMIN'"><a
+								href="#/myblog">My Blog</a></li>
+							<li data-ng-show="currentUser.role=='ROLE_ADMIN'"><a
+								href="#/adminblog">Blog Approval</a>
+						</ul></li>
+
+						
+						
+						<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Forum<span class="caret" /></a>
+						<ul class="dropdown-menu">
+							<li data-ng-hide="currentUser==undefined"><a href="#/forum">Add Forum</a>
+							<li>
+							<li><a href="#/showforum">Show Forum</a></li>
+							<li><a href="#/allapprovedforum">Show All Approved Forum</a></li>
+							<li><a href="#/allforum">All My Forum</a></li>
+							<li
+								data-ng-hide="currentUser==undefined||currentUser.role=='ROlE_ADMIN'"><a
+								href="#/myforum">My Approved Forum</a></li>
+							<li data-ng-show="currentUser.role=='ROLE_ADMIN'"><a
+								href="#/adminforum">Forum Approval</a>
+						</ul></li>
+
+
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Job<span class="caret" /></a>
+						<ul class="dropdown-menu">
+							<li data-ng-show="currentUser.role=='ROLE_ADMIN'"><a href="#/publishjob">Publish Job</a>
+							<li>
+							<li><a href="#/showjob">Show job</a></li>
+							<li><a href="#/jobdetail">Show Job Detail</a></li>
+							<li><a href="#/alljob">ALL Job</a></li>
+							<li
+								data-ng-hide="currentUser==undefined||currentUser.role=='ROlE_ADMIN'"><a
+								href="#/myjob">My Jobs</a></li>
+							<li data-ng-show="currentUser.role=='ROLE_ADMIN'"><a
+								href="#/adminjob">job Approval</a>
+						</ul></li>
+						
+						
+						
+						<li data-ng-show="currentUser.role=='ROLE_USER'" ><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Friends<span class="caret" /></a>
+						<ul class="dropdown-menu">
+							
+							
+							<li><a href="#/showFriend">Friend List</a></li>
+							<li><a href="#/showSuggestedFriend">Suggested Friends</a></li>
+							<li><a href="#/showPendingFriend">Pending Request</a></li>
+							
+						</ul></li>
+						
+						
+						
+<li data-ng-show="currentUser.role=='ROLE_USER'"><a
+								href="#/updateProfile">Update Profile Pic</a></li>
+
+
+
+
+				</ul>
+				<div class="nav navbar-nav navbar-right"
+					data-ng-hide="currentUser==undefined">
+					<ul><li data-ng-show="currentUser.userName"><img class="img-circle" src="http://localhost:8085/CollaborationControllers/getImage/{{currentUser.userName}}" width="50" height="50"/></li>
+					<li data-ng-show="currentUser.userName"><font color="white" face="calibri" size='4'>Welcome
+								{{currentUser.userName}}</font></li>
+								
+						<li data-ng-show="currentUser.userName"><a
+							style="color: white" href="" data-ng-click="logout()"><span
+								class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
+						
+					</ul>
+					<!-- 	<input type="submit" value="Logout" data-ng-click="logout"/>  -->
+
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- </table> -->
+	<div data-ng-view></div>
+
+</body>
+</html>

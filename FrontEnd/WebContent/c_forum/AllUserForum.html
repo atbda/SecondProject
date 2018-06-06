@@ -1,0 +1,76 @@
+
+
+<div class="container" data-ng-controller="ForumController">
+	<table class="table">
+		<tr>
+			<td>Forum Name</td>
+			<td>Forum Content</td>
+		</tr>
+		
+		<tr >
+<!-- 		<td>{{forumdata.length}}</td>
+ -->					<td data-ng-if="currentUser.userName==null" rowspan="2" style="color: red; font-size: 30px; font-family: tahoma; text-align: center;">Please Login first<td>
+							<td data-ng-if="forumdata.length==0 && currentUser.userName!=null " rowspan="2" style="color: red; font-size: 30px; font-family: tahoma;">No Forums<td>
+		
+		</tr>
+	<tr data-ng-repeat="forum in userforumdata">
+
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.forumName}}</td>
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.forumContent}}</td>
+			
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.status}}</td>
+<td data-ng-show="forum.loginname==currentUser.userName"><input type="button" value="Delete Forum" data-ng-click="deleteForum(forum.forumId)"class="btn btn-danger"/></td>
+
+		</tr> 
+
+
+
+
+
+
+
+
+<!-- <div class="container" data-ng-controller="BlogController">
+	<table class="table">
+		<tr>
+			<td>Blog Name</td>
+			<td>Blog Content</td>
+		</tr>
+		<tr data-ng-repeat="blog in $scope.userblogdata">
+			<td>{{blog.blogName}}</td>
+			<td>{{blog.blogContent}}</td>
+		</tr>
+
+
+	</table>
+</div> -->
+<!-- <div class="container">
+  <h2>All Blogs</h2>
+  <td>Click on the button to toggle between showing and hiding content.</td>
+  <input type="button" data-ng-click="incrementLike({{blog.blogId}})" value='Like' class="btn btn-info"/>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">{{blog.blogName}}</button>
+  <div id="demo" class="collapse">
+    {{blog.blogContent}}
+  </div>
+</div> -->
+<!-- <tr data-ng-repeat="blog in allblogdata">
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Collapsible Group 1</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+</div>
+</tr>
+ -->
+
+

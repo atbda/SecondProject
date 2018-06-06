@@ -1,0 +1,90 @@
+<!-- <head>
+
+
+<style type="text/css">
+body {
+	background-image: url("resources/images/secure.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head> -->
+
+<div class="container" data-ng-controller="JobController">
+	<div id="login-box">
+		<div class="logo">
+			<!-- <img src="resources/images/lock.png"
+				class="img img-responsive img-circle center-block" height="50px"
+				width="60px" /> -->
+			<h1 class="logo-caption">
+				<span class="tweak">P</span>ublish <span class="tweak">J</span>ob
+			</h1>
+		</div>
+		<!-- /.logo -->
+		<div class="controls">
+			<form data-ng-submit="publishJob()" method="post">
+		<h1 class="logo" class="logo-caption">
+				<span class="tweak">Job Designation</span>
+			</h1>
+				<input type="text" name="jobDesignation" data-ng-model="job.jobDesignation"
+					placeholder="Enter Job Designation Here" class="form-control" /> 
+					
+					<div class ="row">
+					<div class="col-sn-12 form-group">
+				<h1 class="logo" class="logo-caption">
+				<span class="tweak">Company</span>
+			</h1>
+			
+					<input type="text" name="comany" data-ng-model="job.company"
+					placeholder="Enter Company Name Here" class="form-control"/>
+					</div>
+					
+					<h1 class="logo" class="logo-caption">
+				<span class="tweak">Salary</span>
+			</h1>
+				<input type="text" name="salary" data-ng-model="job.salary"
+					placeholder="Enter Job Salary Here" class="form-control" /> 
+					
+					
+					<h1 class="logo" class="logo-caption">
+				<span class="tweak">Location</span>
+			</h1>
+				<input type="text" name="location" data-ng-model="job.location"
+					placeholder="Enter Job location Here" class="form-control" /> 
+					
+					<h1 class="logo" class="logo-caption">
+				<span class="tweak">Job Description</span>
+			</h1>
+				<input type="text" name="jobDescription" data-ng-model="job.jobDescription"
+					placeholder="Enter Job Description Here" class="form-control" /> 
+					
+					
+						<h1 class="logo" class="logo-caption">
+				<span class="tweak">Last Date to Apply</span>
+			</h1>
+				<input type="date" name="createDate" data-ng-model="job.createdDate"
+					placeholder="Enter Job Description Here" class="form-control" /> 
+					
+					
+					
+					
+					
+					
+					 <!-- <input
+					type="text" name="blogContent" data-ng-model="blog.blogContent"
+					placeholder="Enter your blog content" class="form-control" /> -->
+				<!-- 			<button type="button" class="btn btn-default btn-block btn-custom">Login</button>
+ -->
+			<!-- 	<center><input type="submit" class="btn btn-default btn-block btn-custom"
+				value="Publish Job" /></center> -->
+				
+				<button  type ="submit" type="button" class="btn btn-default btn-block btn-custom">Publish Job</button>
+
+			</form>
+		</div>
+		<!-- /.controls -->
+	</div>
+	<!-- /#login-box -->
+</div>
+<!-- /.container -->
+<div id="particles-js"></div>

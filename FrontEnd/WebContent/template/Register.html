@@ -1,0 +1,50 @@
+<head>
+
+
+<style type="text/css">
+body {
+	background-image: url("resources/images/secure.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<div class="container" data-ng-controller="UserController">
+	<div id="login-box">
+		<div class="logo">
+			<img src="resources/images/lock.png"
+				class="img img-responsive img-circle center-block" height="50px"
+				width="60px" />
+			<h1 class="logo-caption">
+				<span class="tweak">R</span>egister
+			</h1>
+		</div>
+		<!-- /.logo -->
+		<div class="controls">
+			<form class="register" data-ng-submit="registerUser()" role="form">
+
+				<input type="text" name="userName" data-ng-model="user.userName"
+					placeholder="Username" class="form-control" /> <input type="text"
+					name="loginname" data-ng-model="user.loginname"
+					placeholder="Full Name" class="form-control" /> <input
+					type="email" name="emailId" data-ng-model="user.emailId"
+					placeholder="Email ID" class="form-control" /> <input
+					type="password" name="password" data-ng-model="user.password"
+					placeholder="Password" class="form-control" /> <input type="text"
+					name="mobileNo" data-ng-model="user.mobileNo"
+					placeholder="Mobile Number" class="form-control" /> <input
+					type="text" name="address" data-ng-model="user.address"
+					placeholder="Address" class="form-control" />
+				<!-- 			<button type="button" class="btn btn-default btn-block btn-custom">Register</button>
+ -->
+
+				<input type="submit" data-ng-click="register()"
+					class="btn btn-default btn-block btn-custom" value="register" />
+			</form>
+		</div>
+		<!-- /.controls -->
+	</div>
+	<!-- /#login-box -->
+</div>
+<!-- /.container -->
+<div id="particles-js"></div>

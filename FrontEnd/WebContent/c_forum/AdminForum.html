@@ -1,0 +1,31 @@
+<div class="container" data-ng-controller="ForumController">
+	<table class="table">
+		<tr>
+		  
+			<td>Forum Name</td>
+			<td>Forum Content</td>
+			<td>Loginname</td>
+			   <td>ID<td>
+			<td>Operation</td>
+			
+		</tr>
+		<tr data-ng-repeat="forum in allforumdata">
+		    
+			<td>{{forum.forumName}}</td>
+			<td>{{forum.forumContent}}</td>
+			<td>{{forum.loginname}}</td>
+			<td>{{forum.forumId}}</td>
+			
+			<td data-ng-hide="forum.status=='A'">
+			<input type="button" value="Approve" data-ng-click="approve(forum.forumId)" class="btn btn-info"/>
+			</td>
+			<td data-ng-hide="forum.status=='NA'">
+			<input type="button" value="Reject" data-ng-click="reject(forum.forumId)" class="btn btn-success"/>
+			</td>
+			<td data-ng-hide="forum.status=='A'">
+			<input type="button" value="Delete" data-ng-click="deleteForum(forum.forumId)" class="btn btn-danger"/>
+			</td>
+		</tr>
+
+		</table>
+		</div>

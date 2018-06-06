@@ -1,0 +1,31 @@
+
+<div class="container" data-ng-controller="JobController">
+	<table class="table">
+		<tr>
+			<td>Job Id</td>
+			<td>Company Name</td>
+			<td>Designation</td>
+			<td>Salary</td>
+			<td>Location</td>
+			<td>Description</td>
+			<td>Last Date to Apply</td>
+			<td>Status</td>
+			<td>Operation</td>
+		</tr>
+		<tr data-ng-repeat="job in alljobdata">
+		    <td>{{job.jobId}}</td>
+			<td>{{job.company}}</td>
+			<td>{{job.jobDesignation}}</td>
+			<td>{{job.salary}}</td>
+			<td>{{job.location}}</td>
+			<td>{{job.jobDescription}}</td>
+			<td>{{job.createdDate}}</td>
+			<td>{{job.status}}</td>
+			
+			<td><input data-ng-show="currentUser.role=='ROLE_USER'" type="button" data-ng-click="applyjob(job.jobId)" value="Apply" class="btn btn-info"/>
+		<td><input data-ng-show="currentUser.role=='ROLE_ADMIN'" type="button" data-ng-click="deletejob(job.jobId)" value="Delete" class="btn btn-danger"/> 
+		</tr>
+
+
+	</table>
+</div>

@@ -1,0 +1,33 @@
+<div class="container" data-ng-controller="ForumController">
+	<table class="table">
+		<tr>
+			<td>Forum Name</td>
+			<td>Forum Content</td>
+			<td>Status</td>
+		</tr>
+		
+		<tr >
+<!-- 		<td>{{blogdata.length}}</td>
+ -->					<td data-ng-if="currentUser.userName==null" rowspan="2" style="color: red; font-size: 30px; font-family: tahoma; text-align: center;">Please Login first<td>
+							<td data-ng-if="forumdata.length==0 && currentUser.userName!=null " rowspan="2" style="color: red; font-size: 30px; font-family: tahoma;">No Forums<td>
+		
+		</tr>
+	<tr data-ng-repeat="forum in forumdata">
+
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.forumName}}</td>
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.forumContent}}</td>
+			
+			<td data-ng-show="forum.loginname==currentUser.userName">{{forum.status}}</td>
+<td data-ng-show="forum.loginname==currentUser.userName"><input type="button" value="Delete Forum" data-ng-click="deleteForum(forum.forumId)"class="btn btn-danger"/></td>
+
+		</tr> 
+
+<!-- <tr data-ng-repeat="blog in $scope.blogdata">
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.blogName}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.blogContent}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname">{{blog.status}}</td>
+<td data-ng-show="blog.loginname==currentUser.loginname"><input type="button" value="Delete Blog" data-ng-click="deleteBlog(blog.blogId)"class="btn btn-danger"/></td>
+</tr> -->
+	</table>
+</div>
+
